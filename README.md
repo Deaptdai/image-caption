@@ -7,18 +7,18 @@
 ---
 
 ## 项目结构
-image-caption/ 
-├── frontend/ # 前端代码 
-│ ├── src/ # 前端源码 
-│ ├── public/ # 静态资源
-│ ├── package.json 
-│ ├── vite.config.ts 
-│ └── tsconfig.json 
-├── server/ # 后端代码 
-│ ├── src/ # 后端源码 
-│ ├── .env # 环境变量配置 
-│ ├── package.json 
-│ └── app.js 
+image-caption/  <br>
+├── frontend/ # 前端代码 <br>
+│ ├── src/ # 前端源码 <br>
+│ ├── public/ # 静态资源<br>
+│ ├── package.json <br>
+│ ├── vite.config.ts <br>
+│ └── tsconfig.json <br>
+├── server/ # 后端代码 <br>
+│ ├── src/ # 后端源码 <br>
+│ ├── .env # 环境变量配置 <br>
+│ ├── package.json <br>
+│ └── app.js <br>
 └── README.md # 项目说明文件
 
 ---
