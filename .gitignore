@@ -42,3 +42,8 @@ backend/build
 *.swp
 *.bak
 *.old
+
+# Documentation
+docs/
+*.docx
+*.pdf
