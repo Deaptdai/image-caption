@@ -14,13 +14,13 @@
                     </button>
                 </div>
                 <div class="social-icons">
-                    <a class="icon-link" href="#">
+                    <a class="icon-link" href="https://www.facebook.com/">
                         <i class="fab fa-facebook cont-icon"></i>
                     </a>
-                    <a class="icon-link" href="#">
+                    <a class="icon-link" href="https://www.twitter.com/">
                         <i class="fab fa-twitter cont-icon"></i>
                     </a>
-                    <a class="icon-link" href="#">
+                    <a class="icon-link" href="https://github.com/">
                         <i class="fab fa-github cont-icon"></i>
                     </a>
                 </div>
@@ -99,17 +99,14 @@ export default {
         // 登录处理
         const handleLogin = async () => {
             try {
-                const response = await axios.post("/login", {
+                const response = await axios.post("user/login", {
                     username: loginForm.value.username,
-                    password: loginForm.value.password,
+                    userPassword: loginForm.value.password,
                 });
-                if (response.data.code === 1) {
-                    // alert("登录成功");
-                    localStorage.setItem("token", response.data.data.token);
-                    // 跳转到主页面
+                if (response.code === 1) {
                     window.location.href = "/main";
                 } else {
-                    loginError.value = "登录失败：" + response.data.msg;
+                    loginError.value = "登录失败：" + "账号或密码错误";
                 }
             } catch (error) {
                 loginError.value = "无法登录:" + error.message;
@@ -124,12 +121,12 @@ export default {
             }
 
             try {
-                const response = await axios.post("/register", {
+                const response = await axios.post("user/register", {
                     username: registerForm.value.username,
                     // email: registerForm.value.email,
-                    password: registerForm.value.password,
+                    userPassword: registerForm.value.password,
                 });
-                if (response.data.code === 1) {
+                if (response.code === 1) {
                     // alert("注册成功");
                     registerError.value = "注册成功！";
                     // 切换到登录表单
@@ -138,7 +135,7 @@ export default {
                         login();
                     }, 1300);
                 } else {
-                    registerError.value = "注册失败：" + response.data.msg;
+                    registerError.value = "注册失败：" + "注册账号或密码不符合要求";
                 }
             } catch (error) {
                 registerError.value = "注册失败：" + error.message;

@@ -142,14 +142,6 @@ function clearConsole() {
     consoleRef.value.clearConsole();
 }
 
-onMounted(async () => {
-    try {
-        const response = await axios.get('/main');
-        console.log('Main endpoint data:', response);
-    } catch (error) {
-        console.error('请求失败：', error);
-    }
-});
 </script>
 
 <style scoped>
