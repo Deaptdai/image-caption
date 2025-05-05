@@ -1,11 +1,8 @@
 spring:
   application:
     name: one-team
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    username: root
-    password: 123456
-    url: jdbc:mysql://localhost:3306/dlc_user?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+  profiles:
+    active: prod
 server:
   port: 8080
 mybatis-plus:

@@ -2,7 +2,7 @@ package com.deapt.imagecaption.service;
 
 import com.deapt.imagecaption.model.domin.User;
 import com.baomidou.mybatisplus.extension.service.IService;
-import jakarta.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletRequest;
 
 /**
 * @author Deapt

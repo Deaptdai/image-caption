@@ -7,10 +7,10 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 // https://vitejs.dev/config/
 export default defineConfig({
   server: {
-    port: 80,
+    port: 3000,
     proxy: {
       '/api': {
-        target: 'http://localhost:8080',
+        target: 'http://47.108.95.177:8889',
         rewrite: (path) => path.replace(/^\/api/, ''),
         changeOrigin: true,
       }

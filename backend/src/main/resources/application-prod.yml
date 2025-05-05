@@ -1,0 +1,7 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: deapt
+    password: 12345678
+    url: jdbc:mysql://47.108.95.177:3306/image_caption?useSSL=false&serverTimezone=UTC
+

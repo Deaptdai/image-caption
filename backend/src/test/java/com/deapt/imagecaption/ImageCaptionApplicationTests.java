@@ -1,7 +1,7 @@
 package com.deapt.imagecaption;
 
 import com.deapt.imagecaption.service.UserService;
-import jakarta.annotation.Resource;
+import javax.annotation.Resource;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;

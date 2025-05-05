@@ -125,6 +125,7 @@ export default {
                     username: registerForm.value.username,
                     // email: registerForm.value.email,
                     userPassword: registerForm.value.password,
+                    checkPassword: registerForm.value.confirmPassword
                 });
                 if (response.code === 1) {
                     // alert("注册成功");
