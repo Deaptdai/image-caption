@@ -133,8 +133,8 @@ function traverseData(array, interval = 1000) {
   timerId = setInterval(() => {
     if (index < array.length) {
       relation.value = 'normal';
-      image0.value = '/src/assets/interaction/' + String(array[index].constraint[0]) + '.svg';
-      image1.value = '/src/assets/interaction/' + String(array[index].constraint[1]) + '.svg';
+      image0.value = '/interaction/' + String(array[index].constraint[0]) + '.svg';
+      image1.value = '/interaction/' + String(array[index].constraint[1]) + '.svg';
       Id0.value = array[index].constraint[0];
       Id1.value = array[index].constraint[1];
       console.log(array[index]);
