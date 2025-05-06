@@ -60,7 +60,7 @@ image-caption/
 
 1. 安装依赖：
    ```bash
-   cd frontend
+   cd image-caption-frontend
    npm install
    ```
 
@@ -81,20 +81,9 @@ image-caption/
 
 ### 后端
 
-1. 配置 `application.yml` 文件：
-   ```yaml
-   spring:
-     datasource:
-       url: jdbc:mysql://localhost:3306/dlc_user?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
-       username: root
-       password: 123456
-   server:
-     port: 8080
-   ```
-
-2. 启动后端服务：
+1. 启动后端服务：
    ```bash
-   cd backend
+   cd image-caption-backend
    mvn spring-boot:run
    ```
 
@@ -123,7 +112,7 @@ image-caption/
 server: {
   proxy: {
     '/api': {
-      target: 'http://localhost:8080',
+      target: 'http://47.108.95.177:8889',
       rewrite: (path) => path.replace(/^\/api/, ''),
       changeOrigin: true,
     }
